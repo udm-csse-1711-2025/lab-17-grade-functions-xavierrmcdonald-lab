@@ -20,7 +20,8 @@ using namespace std;
      // Keep asking until the score is between 0 and 100.
      // Return the valid score.
 
-
+// loop for score input, this also make sure that the user dont put in a number bigger than 100 and negative 
+// continues to ask you for a valid grade 
 double getScore() {
     double score;
 
@@ -56,6 +57,7 @@ double getScore() {
     // 60–69:  D
     // Below 60: F
 
+// conditionals for grade printing. compares your grades to the letter ranges 
 void displayLetterGrade(double score){
     if (score >= 90 ) {
         cout << "you got an A!" << endl;
