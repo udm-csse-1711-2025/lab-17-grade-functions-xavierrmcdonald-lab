@@ -2,7 +2,7 @@
 // Gets three exam scores from the user and shows them 
 // their letter grades
 // Started by: Caitlin Snyder
-// Edited by: [NAME HERE]
+// Edited by: [Xavier McDonald]
 
 #include <iostream>
 using namespace std;
@@ -15,10 +15,25 @@ using namespace std;
  *  Return Value: A double representing a valid test score (0–100)
  ****************************************************************/
 
-// [TO DO: ADD getScore function HERE]
-    // Ask the user for a score and validate input.
-    // Keep asking until the score is between 0 and 100.
-    // Return the valid score.
+ // [TO DO: ADD getScore function HERE]
+     // Ask the user for a score and validate input.
+     // Keep asking until the score is between 0 and 100.
+     // Return the valid score.
+
+
+double getScore() {
+    double score;
+
+    cout << "give me a score:";
+    cin >> score;
+
+    while (score < 0 || score > 100) {
+        cout << "error, i need score to be between 0 and 100";
+        cin >> score;
+    }
+    return score;
+}
+
 
 
 
@@ -41,7 +56,24 @@ using namespace std;
     // 60–69:  D
     // Below 60: F
 
+void displayLetterGrade(double score){
+    if (score >= 90 ) {
+        cout << "you got an A!" << endl;
+    }
+    else if (score >= 80 && score <= 89){
+        cout << "you got a B!" << endl;
+    }
+    else if (score >= 70 && score <= 79){
+        cout << "you got a C" << endl;
+    }
+    else if (score >= 60 && score <= 69) {
+        cout << "bad news, you got a D" << endl;
+    }
+    else {
+        cout << "dang... you an F" << endl;
+    }
 
+}
 
 // You should not need to edit main for your program to run 
 // correctly. Only edit it to add cout statements or comment
